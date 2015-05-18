@@ -43,6 +43,7 @@ public class MainActivity extends ActionBarActivity implements MenuFragment.OnMe
     @Override
     public void onMenuItemClicked(int position) {
         switch (getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) {
+            case Configuration.SCREENLAYOUT_SIZE_XLARGE:
             case Configuration.SCREENLAYOUT_SIZE_LARGE:
                 ContentFragment contentFragment = (ContentFragment) getSupportFragmentManager().findFragmentById(R.id.content_fragment);
                 contentFragment.setText((position+1) + " clicked");
@@ -51,6 +52,7 @@ public class MainActivity extends ActionBarActivity implements MenuFragment.OnMe
                 Intent intent = new Intent(this, ContentActivity.class);
                 intent.putExtra("clickedItem", (position+1) + " clicked");
                 startActivity(intent);
+
                 break;
         }
     }
