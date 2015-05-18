@@ -1,0 +1,8 @@
+<fragment
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_fragment"
+    android:name="dk.itsmap.group22.itsmap_hi4_22.MenuFragment"
+    tools:layout="@layout/fragment_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
